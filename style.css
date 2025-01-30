@@ -123,14 +123,4 @@ body {
     margin-bottom: 10px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .albumCover img {
-        width: auto;
-        height: auto;
-        max-width: 90%; /* Adjust this if necessary */
-        margin-top: 30px; /* Use px to control the margin size more accurately */
-    }
-}
-
 }
