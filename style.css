@@ -44,43 +44,44 @@ body {
     margin-bottom: 20px; /* Space between image and text */
 }
 
-/* Arrows placed outside the album art */
+/* Arrows styling */
 .arrow-icon {
     width: 40px; /* Adjust arrow size */
     height: auto;
     cursor: pointer;
 }
 
-/* Fixed position of arrows */
+/* Arrows fixed positioning - will adjust dynamically */
 .arrow {
-    position: fixed;
+    position: absolute; /* Changed to absolute to stay outside of album */
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
 }
 
+/* Arrow positioning for different screen sizes */
 #prevPage {
-    left: 20px; /* Positioned on the left side */
+    left: 5%; /* Position on the left side */
 }
 
 #nextPage {
-    right: 20px; /* Positioned on the right side */
+    right: 5%; /* Position on the right side */
 }
 
 #prevPage2 {
-    left: 20px;
+    left: 5%;
 }
 
 #nextPage2 {
-    right: 20px;
+    right: 5%;
 }
 
 #prevPage3 {
-    left: 20px;
+    left: 5%;
 }
 
 #nextPage3 {
-    right: 20px;
+    right: 5%;
 }
 
 /* Download link styling */
@@ -131,8 +132,6 @@ body {
     /* Arrows remain outside the album art */
     .arrow {
         width: 45px; /* Adjust size of arrows */
-        left: 5%; /* Ensure even distance from the left side */
-        right: 5%; /* Ensure even distance from the right side */
     }
 }
 
@@ -151,7 +150,5 @@ body {
     /* Arrows remain outside the album art */
     .arrow {
         width: 35px; /* Adjust size of arrows for mobile */
-        left: 5%; /* Ensure even distance from the left side */
-        right: 5%; /* Ensure even distance from the right side */
     }
 }
