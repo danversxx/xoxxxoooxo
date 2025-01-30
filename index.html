@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
     <div id="pagesWrap">
         <!-- Page 1 -->
-        <div id="page-1" class="fullPage">
+        <div id="page-1" class="fullPage active">
             <a href="#" id="prevPage" class="arrow">
                 <img src="https://web.archive.org/web/20110822073656im_/http://the-weeknd.com/images/prev-arrow.png" alt="Prev Arrow" class="arrow-icon">
             </a>
@@ -25,7 +25,7 @@
              <br>
             <div>contact@the-weeknd.com</div>
             <div class="logoWrap">
-                <img src="https://i.imgur.com/X41oxrP.png" width="80" height="84" alt="XO Heart">
+                <img src="https://i.imgur.com/X41oxrP.png" width="66" height="70" alt="XO Heart">
             </div>
         </div>
 
@@ -40,11 +40,11 @@
             <div class="albumCover">
                 <img src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2f/22/a9/2f22a9a6-5af1-5846-a44e-ba016724ed69/21UM1IM58860.rgb.jpg/1000x1000bb.jpg" width="500" height="500" alt="The Weeknd - Dawn FM Cover">
             </div>
-            <a href="http://theweeknd.com" class="download-link">Download The Weeknd - Dawn FM</a>
+            <a href="http://theweeknd.com6" class="download-link">Download The Weeknd - Dawn FM</a>
             <br>
             <div>contact@the-weeknd.com</div>
             <div class="logoWrap">
-                <img src="https://i.imgur.com/X41oxrP.png" width="80" height="84" alt="XO Heart">
+                <img src="https://i.imgur.com/X41oxrP.png" width="66" height="70" alt="XO Heart">
             </div>
         </div>
 
@@ -63,7 +63,7 @@
              <br>
             <div>contact@the-weeknd.com</div>
             <div class="logoWrap">
-                <img src="https://i.imgur.com/X41oxrP.png" width="80" height="84" alt="XO Heart">
+                <img src="https://i.imgur.com/X41oxrP.png" width="66" height="70" alt="XO Heart">
             </div>
         </div>
 
@@ -73,8 +73,6 @@
                 <a class="addthis_button" href="https://web.archive.org/web/20110822073656/http://www.addthis.com/bookmark.php?v=250&pubid=ra-4d86a98d2d201b06">
                     <img src="https://web.archive.org/web/20110822073656im_/http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share">
                 </a>
-                <script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
-                <script type="text/javascript" src="https://web.archive.org/web/20110822073656js_/http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4d86a98d2d201b06"></script>
             </div>
             <div class="socialLinks">
                 <a href="https://www.facebook.com/theweeknd" rel="The Weeknd Facebook">
@@ -94,45 +92,52 @@
                 </a>
             </div>
         </div>
-
-        <div class="clearfix"></div>
     </div>
 
     <script>
+        // Page Navigation
+        let currentPage = 1;
+
+        function switchPage(next) {
+            document.getElementById(`page-${currentPage}`).classList.remove('active');
+            currentPage = next;
+            document.getElementById(`page-${currentPage}`).classList.add('active');
+        }
+
         document.getElementById('nextPage').addEventListener('click', function(e) {
             e.preventDefault();
-            document.getElementById('page-1').style.display = 'none';
-            document.getElementById('page-2').style.display = 'block';
+            const next = currentPage < 3 ? currentPage + 1 : 1;
+            switchPage(next);
         });
 
         document.getElementById('prevPage').addEventListener('click', function(e) {
             e.preventDefault();
-            document.getElementById('page-1').style.display = 'none';
-            document.getElementById('page-3').style.display = 'block';
+            const prev = currentPage > 1 ? currentPage - 1 : 3;
+            switchPage(prev);
         });
 
         document.getElementById('nextPage2').addEventListener('click', function(e) {
             e.preventDefault();
-            document.getElementById('page-2').style.display = 'none';
-            document.getElementById('page-3').style.display = 'block';
+            const next = currentPage < 3 ? currentPage + 1 : 1;
+            switchPage(next);
         });
 
         document.getElementById('prevPage2').addEventListener('click', function(e) {
             e.preventDefault();
-            document.getElementById('page-2').style.display = 'none';
-            document.getElementById('page-1').style.display = 'block';
+            const prev = currentPage > 1 ? currentPage - 1 : 3;
+            switchPage(prev);
         });
 
         document.getElementById('nextPage3').addEventListener('click', function(e) {
             e.preventDefault();
-            document.getElementById('page-3').style.display = 'none';
-            document.getElementById('page-1').style.display = 'block';
+            const next = currentPage < 3 ? currentPage + 1 : 1;
+            switchPage(next);
         });
 
         document.getElementById('prevPage3').addEventListener('click', function(e) {
             e.preventDefault();
-            document.getElementById('page-3').style.display = 'none';
-            document.getElementById('page-2').style.display = 'block';
+            const prev = currentPage > 1 ? currentPage - 1 : 3;
+            switchPage(prev);
         });
     </script>
 </body>
