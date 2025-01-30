@@ -14,18 +14,19 @@ body {
     position: relative;
 }
 
-/* Main wrapper to center everything */
+/* Pages container - ensures pages stay centered */
 #pagesWrap {
     position: relative;
     width: 100%;
-    height: 100%;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
-/* Page content */
+/* Full page styling */
 .fullPage {
     display: none;
     text-align: center;
@@ -36,51 +37,35 @@ body {
     display: block;
 }
 
-/* Album art styling */
+/* Album cover */
 .albumCover img {
     width: 500px;
     height: 500px;
     object-fit: cover;
-    margin-bottom: 20px; /* Space between image and text */
 }
 
-/* Arrows styling */
+/* Arrow icons */
 .arrow-icon {
-    width: 40px; /* Adjust arrow size */
+    width: 30px;
     height: auto;
     cursor: pointer;
 }
 
-/* Arrows fixed positioning - will adjust dynamically */
+/* Arrows fixed outside of album cover */
 .arrow {
-    position: absolute; /* Changed to absolute to stay outside of album */
+    position: fixed;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
 }
 
-/* Arrow positioning for different screen sizes */
-#prevPage {
-    left: 5%; /* Position on the left side */
-}
-
-#nextPage {
-    right: 5%; /* Position on the right side */
-}
-
-#prevPage2 {
+/* Left and right arrows */
+#prevPage, #prevPage2, #prevPage3 {
     left: 5%;
 }
 
-#nextPage2 {
-    right: 5%;
-}
-
-#prevPage3 {
-    left: 5%;
-}
-
-#nextPage3 {
+#nextPage, #nextPage2, #nextPage3 {
     right: 5%;
 }
 
@@ -95,7 +80,13 @@ body {
     text-decoration: underline;
 }
 
-/* Social links styling */
+/* Social icons positioning */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
 .socialWrap {
     position: absolute;
     bottom: 10px;
@@ -115,40 +106,38 @@ body {
     margin-bottom: 10px;
 }
 
-/* Responsive styling */
-
-/* For Tablet and Larger Mobile Devices */
+/* Responsive adjustments for mobile and tablet */
 @media (max-width: 1024px) {
-    #pagesWrap {
-        width: 90%; /* Scale down pagesWrap for tablet */
-        justify-content: center; /* Ensure it’s centered */
-    }
-
     .albumCover img {
-        width: 70%;  /* Scale album art down a bit */
-        height: auto;
+        width: 80%; /* Scales album art slightly smaller for tablets */
     }
 
-    /* Arrows remain outside the album art */
-    .arrow {
-        width: 45px; /* Adjust size of arrows */
+    /* Resize arrows for mobile/tablet */
+    .arrow-icon {
+        width: 25px;
+    }
+
+    #prevPage, #nextPage {
+        left: 10%;
+        right: 10%;
     }
 }
 
-/* For Mobile */
 @media (max-width: 768px) {
-    #pagesWrap {
-        width: 90%; /* Scale down pagesWrap for mobile */
-        justify-content: center; /* Center content */
+    body {
+        font-size: 10px; /* Adjust font size for mobile */
     }
 
     .albumCover img {
-        width: 70%;  /* Reduce album art size for mobile */
-        height: auto;
+        width: 90%; /* Further scaling of album art for mobile */
     }
 
-    /* Arrows remain outside the album art */
-    .arrow {
-        width: 35px; /* Adjust size of arrows for mobile */
+    #prevPage, #nextPage {
+        left: 10%;
+        right: 10%;
+    }
+
+    .arrow-icon {
+        width: 20px; /* Slightly smaller arrows for mobile */
     }
 }
