@@ -14,17 +14,18 @@ body {
     position: relative;
 }
 
-/* Other styles remain the same */
+/* Main wrapper to center everything */
 #pagesWrap {
     position: relative;
     width: 100%;
-    margin-top: 10px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+/* Page content */
 .fullPage {
     display: none;
     text-align: center;
@@ -35,35 +36,35 @@ body {
     display: block;
 }
 
+/* Album art styling */
 .albumCover img {
     width: 500px;
     height: 500px;
     object-fit: cover;
+    margin-bottom: 20px; /* Space between image and text */
 }
 
+/* Arrows placed outside the album art */
 .arrow-icon {
-    width: 30px;
+    width: 40px; /* Adjust arrow size */
     height: auto;
     cursor: pointer;
 }
 
+/* Fixed position of arrows */
 .arrow {
-    position: absolute;
-    top: 50%; /* Align arrows vertically with the middle of the screen */
+    position: fixed;
+    top: 50%;
     transform: translateY(-50%);
     z-index: 10;
 }
 
-#prevPage, #nextPage, #prevPage2, #nextPage2, #prevPage3, #nextPage3 {
-    top: 50%; /* Adjust arrows to be vertically centered */
-}
-
 #prevPage {
-    left: 20px;
+    left: 20px; /* Positioned on the left side */
 }
 
 #nextPage {
-    right: 20px;
+    right: 20px; /* Positioned on the right side */
 }
 
 #prevPage2 {
@@ -82,6 +83,7 @@ body {
     right: 20px;
 }
 
+/* Download link styling */
 .download-link {
     text-align: center;
     color: #fff;
@@ -92,12 +94,7 @@ body {
     text-decoration: underline;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: block;
-}
-
+/* Social links styling */
 .socialWrap {
     position: absolute;
     bottom: 10px;
@@ -117,54 +114,38 @@ body {
     margin-bottom: 10px;
 }
 
-/* Responsive */
+/* Responsive styling */
+
+/* For Tablet and Larger Mobile Devices */
 @media (max-width: 1024px) {
     #pagesWrap {
         width: 90%; /* Scale down pagesWrap for tablet */
     }
 
     .albumCover img {
-        width: 80%;  /* Scale album art down but not too much */
+        width: 80%;  /* Scale album art down a bit */
         height: auto;
-        margin-top: 5%;
     }
 
+    /* Arrows remain outside the album art */
     .arrow {
-        width: 40px; /* Slightly bigger arrows for tablet */
-    }
-
-    .arrow-icon {
-        width: 40px;
-        height: auto;
-    }
-
-    #prevPage, #nextPage, #prevPage2, #nextPage2, #prevPage3, #nextPage3 {
-        top: 50%; /* Adjust arrows to be vertically centered */
+        width: 50px; /* Adjust size of arrows */
     }
 }
 
-/* Mobile */
+/* For Mobile */
 @media (max-width: 768px) {
     #pagesWrap {
         width: 90%; /* Scale down pagesWrap for mobile */
     }
 
     .albumCover img {
-        width: 70%;  /* Reduce album art size for mobile */
+        width: 80%;  /* Reduce album art size for mobile */
         height: auto;
-        margin-top: 5%;
     }
 
+    /* Arrows remain outside the album art */
     .arrow {
-        width: 35px; /* Slightly bigger arrows for mobile */
-    }
-
-    .arrow-icon {
-        width: 35px;
-        height: auto;
-    }
-
-    #prevPage, #nextPage, #prevPage2, #nextPage2, #prevPage3, #nextPage3 {
-        top: 50%; /* Adjust arrows to be vertically centered */
+        width: 45px; /* Adjust size of arrows */
     }
 }
