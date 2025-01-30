@@ -3,7 +3,6 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Prevent scrolling */
     font-size: 12px;
     letter-spacing: 3px;
 }
@@ -17,12 +16,11 @@ body {
 #pagesWrap {
     position: relative;
     width: 100%;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: hidden; /* Prevent wrapping content from overflowing */
-    margin-top: 10px
 }
 
 .fullPage {
@@ -96,13 +94,8 @@ body {
     display: block;
 }
 
-.bottom {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
 .socialWrap {
-    position: fixed;
+    position: absolute;
     bottom: 10px;
     left: 10px;
 }
@@ -129,7 +122,7 @@ body {
     .albumCover img {
         width: auto;
         height: auto;
-        max-width: 90%;
+        max-width: 66%;
         margin-top: 10%;
     }
 }
