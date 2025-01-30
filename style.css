@@ -120,16 +120,19 @@ body {
 @media (max-width: 1024px) {
     #pagesWrap {
         width: 90%; /* Scale down pagesWrap for tablet */
+        justify-content: center; /* Ensure it’s centered */
     }
 
     .albumCover img {
-        width: 80%;  /* Scale album art down a bit */
+        width: 70%;  /* Scale album art down a bit */
         height: auto;
     }
 
     /* Arrows remain outside the album art */
     .arrow {
-        width: 50px; /* Adjust size of arrows */
+        width: 45px; /* Adjust size of arrows */
+        left: 5%; /* Ensure even distance from the left side */
+        right: 5%; /* Ensure even distance from the right side */
     }
 }
 
@@ -137,15 +140,18 @@ body {
 @media (max-width: 768px) {
     #pagesWrap {
         width: 90%; /* Scale down pagesWrap for mobile */
+        justify-content: center; /* Center content */
     }
 
     .albumCover img {
-        width: 80%;  /* Reduce album art size for mobile */
+        width: 70%;  /* Reduce album art size for mobile */
         height: auto;
     }
 
     /* Arrows remain outside the album art */
     .arrow {
-        width: 45px; /* Adjust size of arrows */
+        width: 35px; /* Adjust size of arrows for mobile */
+        left: 5%; /* Ensure even distance from the left side */
+        right: 5%; /* Ensure even distance from the right side */
     }
 }
