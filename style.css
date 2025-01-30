@@ -11,8 +11,10 @@ body {
     font-family: "Courier", "Courier New", monospace;
     background-color: #000;
     color: #fff;
+    position: relative;
 }
 
+/* Other styles remain the same */
 #pagesWrap {
     position: relative;
     width: 100%;
@@ -85,8 +87,6 @@ body {
 .download-link:hover {
     text-decoration: underline;
 }
-
-
 
 .clearfix::after {
     content: "";
