@@ -48,10 +48,14 @@ body {
 }
 
 .arrow {
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 50%; /* Align arrows vertically with the middle of the screen */
     transform: translateY(-50%);
     z-index: 10;
+}
+
+#prevPage, #nextPage, #prevPage2, #nextPage2, #prevPage3, #nextPage3 {
+    top: 50%; /* Adjust arrows to be vertically centered */
 }
 
 #prevPage {
@@ -135,7 +139,7 @@ body {
     }
 
     #prevPage, #nextPage, #prevPage2, #nextPage2, #prevPage3, #nextPage3 {
-        top: 10px; /* Move arrows closer to the middle */
+        top: 50%; /* Adjust arrows to be vertically centered */
     }
 }
 
@@ -161,6 +165,6 @@ body {
     }
 
     #prevPage, #nextPage, #prevPage2, #nextPage2, #prevPage3, #nextPage3 {
-        top: 5px; /* Move arrows closer to the middle on mobile */
+        top: 50%; /* Adjust arrows to be vertically centered */
     }
 }
