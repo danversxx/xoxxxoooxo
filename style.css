@@ -14,8 +14,6 @@ body {
     position: relative;
 }
 
-
-
 /* Other styles remain the same */
 #pagesWrap {
     position: relative;
@@ -113,18 +111,4 @@ body {
 
 .addThisButton {
     margin-bottom: 10px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    body {
-        font-size: 12px; /* Adjust font size for mobile */
-    }
-
-    .albumCover img {
-        width: auto;
-        height: auto;
-        max-width: 66%;
-        margin-top: 10%;
-    }
 }
