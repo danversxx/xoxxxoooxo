@@ -4,13 +4,14 @@ html, body {
     padding: 0;
     height: 100%;
     overflow: hidden; /* Prevent scrolling */
+    font-size: 12px;
+    letter-spacing: 3px;
 }
 
 body {
     font-family: "Courier", "Courier New", monospace;
     background-color: #000;
     color: #fff;
-    font-size: 13px;
 }
 
 #pagesWrap {
@@ -22,6 +23,7 @@ body {
     align-items: center;
     flex-direction: column;
     overflow: hidden; /* Prevent wrapping content from overflowing */
+    margin-top: 10px
 }
 
 .fullPage {
@@ -35,7 +37,6 @@ body {
 }
 
 .albumCover img {
-    margin-top: 10px;
     width: 500px;
     height: 500px;
     object-fit: cover;
@@ -80,7 +81,6 @@ body {
 
 .download-link {
     text-align: center;
-    letter-spacing: 3px;
     color: #fff;
     text-decoration: none;
 }
