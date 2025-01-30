@@ -14,39 +14,44 @@ body {
     position: relative;
 }
 
-/* Other styles remain the same */
+/* Pages container */
 #pagesWrap {
     position: relative;
     width: 100%;
-    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+/* Full page styling */
 .fullPage {
     display: none;
     text-align: center;
     position: relative;
+    padding: 20px;
 }
 
 .fullPage.active {
     display: block;
 }
 
+/* Album cover styling */
 .albumCover img {
-    width: 500px;
-    height: 500px;
+    max-width: 500px; /* Adjust album size */
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
+/* Arrow icons */
 .arrow-icon {
     width: 30px;
     height: auto;
     cursor: pointer;
 }
 
+/* Arrows fixed on left and right */
 .arrow {
     position: fixed;
     top: 50%;
@@ -54,30 +59,16 @@ body {
     z-index: 10;
 }
 
-#prevPage {
-    left: 20px;
+/* Left and right arrows (adjusted) */
+#prevPage, #prevPage2, #prevPage3 {
+    left: 10px;
 }
 
-#nextPage {
-    right: 20px;
+#nextPage, #nextPage2, #nextPage3 {
+    right: 10px;
 }
 
-#prevPage2 {
-    left: 20px;
-}
-
-#nextPage2 {
-    right: 20px;
-}
-
-#prevPage3 {
-    left: 20px;
-}
-
-#nextPage3 {
-    right: 20px;
-}
-
+/* Download link styling */
 .download-link {
     text-align: center;
     color: #fff;
@@ -88,33 +79,65 @@ body {
     text-decoration: underline;
 }
 
+/* Social links positioning */
 .clearfix::after {
     content: "";
     clear: both;
     display: block;
 }
 
-/* Position social and logo lower for mobile/tablet */
-@media (max-width: 768px) {
-    .socialWrap, .logoWrap {
-        position: absolute;
-        bottom: 50px; /* Lower the social and logoWrap */
-    }
+.socialWrap {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
 
-    /* Align arrows inline with artwork */
-    .arrow {
-        top: calc(50% - 250px); /* Adjust to align with artwork */
-    }
+.socialLinks a {
+    text-decoration: none;
+}
 
-    /* Ensure the album cover image is scaled down slightly but not too much */
+.socialLinks img {
+    width: 30px;
+    height: 30px;
+}
+
+.addThisButton {
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
     .albumCover img {
-        width: 80%;
-        height: auto;
-        max-width: 400px;
+        max-width: 70%; /* Slightly reduce the album art on tablets */
     }
 
-    /* Small tweaks for better mobile UI */
+    .arrow-icon {
+        width: 25px; /* Smaller arrows on tablets */
+    }
+
+    /* Arrows placement */
+    #prevPage, #nextPage, #prevPage2, #nextPage2, #prevPage3, #nextPage3 {
+        top: 50%;
+    }
+}
+
+@media (max-width: 768px) {
     body {
-        font-size: 10px;
+        font-size: 10px; /* Adjust font size for smaller devices */
+         justify-content: center;
+        
+    }
+
+    .albumCover img {
+        max-width: 80%; /* Reduce album art size for mobile */
+    }
+
+    .arrow-icon {
+        width: 15px; /* Even smaller arrows for mobile */
+    }
+
+    /* Arrows placement */
+    #prevPage, #nextPage, #prevPage2, #nextPage2, #prevPage3, #nextPage3 {
+        top: 50%;
     }
 }
