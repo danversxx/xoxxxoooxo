@@ -113,9 +113,13 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
     .albumCover img {
-        max-width: 90%; /* Adjust this percentage to your preference */
+        width: auto;
         height: auto;
+        max-width: 90%; /* You can adjust this value to your preference */
+        margin-top: 10%; /* Adds a top margin similar to the desktop version */
     }
+}
+
 }
 
 }
