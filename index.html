@@ -1,152 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Weeknd - Official Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Ensure no scrollbar */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
 
-    <div id="pagesWrap">
-        <!-- Page 1 -->
-        <div id="page-1" class="fullPage active">
-            <a href="#" id="prevPage" class="arrow">
-                <img src="https://i.imgur.com/u4H0LD8.png" alt="Prev Arrow" class="arrow-icon">
-            </a>
-            <a href="#" id="nextPage" class="arrow">
-                <img src="https://i.imgur.com/47qc7Pj.png" alt="Next Arrow" class="arrow-icon">
-            </a>
-             <br>
-            <div class="albumCover">
-                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6f/bc/e6/6fbce6c4-c38c-72d8-4fd0-66cfff32f679/20UMGIM12176.rgb.jpg/1000x1000bb.jpg" width="500" height="500" alt="The Weeknd - After Hours Cover">
-            </div>
-            <br>
-            <a href="http://theweeknd.com" class="download-link">Download The Weeknd - After Hours</a>
-            <div>contact@the-weeknd.com</div>
-             <br>
-            <div class="logoWrap">
-                <img src="https://i.imgur.com/X41oxrP.png" width="66" height="70" alt="XO Heart">
-            </div>
-        </div>
-
-        <!-- Page 2 -->
-        <div id="page-2" class="fullPage">
-            <a href="#" id="prevPage2" class="arrow">
-                <img src="https://i.imgur.com/u4H0LD8.png" alt="Prev Arrow" class="arrow-icon">
-            </a>
-            <a href="#" id="nextPage2" class="arrow">
-                <img src="https://i.imgur.com/47qc7Pj.png" alt="Next Arrow" class="arrow-icon">
-            </a>
-             <br>
-            <div class="albumCover">
-                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2f/22/a9/2f22a9a6-5af1-5846-a44e-ba016724ed69/21UM1IM58860.rgb.jpg/1000x1000bb.jpg" width="500" height="500" alt="The Weeknd - Dawn FM Cover">
-            </div>
-            <br>
-            <a href="http://theweeknd.com" class="download-link">Download The Weeknd - Dawn FM</a>
-			<div>contact@the-weeknd.com</div>
-			<br>
-            <div class="logoWrap">
-                <img src="https://i.imgur.com/X41oxrP.png" width="66" height="70" alt="XO Heart">
-            </div>
-        </div>
-
-        <!-- Page 3 -->
-        <div id="page-3" class="fullPage">
-            <a href="#" id="prevPage3" class="arrow">
-                <img src="https://i.imgur.com/u4H0LD8.png" alt="Prev Arrow" class="arrow-icon">
-            </a>
-            <a href="#" id="nextPage3" class="arrow">
-                <img src="https://i.imgur.com/47qc7Pj.png" alt="Next Arrow" class="arrow-icon">
-            </a>
-             <br>
-            <div class="albumCover">
-                <img src="https://i.imgur.com/6ui8Gke.jpeg" width="500" height="500" alt="The Weeknd - Hurry Up Tomorrow Cover">
-            </div>
-             <br>
-            <a href="http://theweeknd.com" class="download-link">Download The Weeknd - Hurry Up Tomorrow</a>
-            <br>
-            <div>contact@the-weeknd.com</div>
-            <br>
-            <div class="logoWrap">
-                <img src="https://i.imgur.com/X41oxrP.png" width="66" height="70" alt="XO Heart">
-            </div>
-        </div>
-
-        <!-- Social Links Section -->
-        <div class="socialWrap">
-            <div class="addThisButton">
-                <a class="addthis_button" href="https://web.archive.org/web/20110822073656/http://www.addthis.com/bookmark.php?v=250&pubid=ra-4d86a98d2d201b06">
-                    <img src="https://web.archive.org/web/20110822073656im_/http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share">
-                </a>
-            </div>
-            <div class="socialLinks">
-                <a href="https://www.facebook.com/theweeknd" rel="The Weeknd Facebook">
-                    <img src="https://i.imgur.com/SvDFqxD.png" alt="Icon Facebook">
-                </a>
-                <a href="https://soundcloud.com/theweeknd" rel="The Weeknd Soundcloud">
-                    <img src="https://i.imgur.com/JEUxbL9.png" alt="Icon Soundcloud">
-                </a>
-                <a href="https://www.instagram.com/theweeknd/" rel="The Weeknd Tumblr">
-                    <img src="https://i.imgur.com/VLhlIOl.png" alt="Icon Tumblr">
-                </a>
-                <a href="https://twitter.com/TheWeeknd" rel="The Weeknd Twitter">
-                    <img src="https://i.imgur.com/oMCgZTL.png" alt="Icon Twitter">
-                </a>
-                <a href="https://www.youtube.com/theweeknd" rel="The Weeknd Youtube">
-                    <img src="https://i.imgur.com/iupWLuv.png" alt="Icon Youtube">
-                </a>
-            </div>
-        </div>
-    </div>
+body {
+    font-family: "Courier", "Courier New", monospace;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+}
 
 
-    <script>
-        // Page Navigation
-        let currentPage = 1;
 
-        function switchPage(next) {
-            document.getElementById(`page-${currentPage}`).classList.remove('active');
-            currentPage = next;
-            document.getElementById(`page-${currentPage}`).classList.add('active');
-        }
+/* Other styles remain the same */
+#pagesWrap {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-        document.getElementById('nextPage').addEventListener('click', function(e) {
-            e.preventDefault();
-            const next = currentPage < 3 ? currentPage + 1 : 1;
-            switchPage(next);
-        });
+.fullPage {
+    display: none;
+    text-align: center;
+    position: relative;
+}
 
-        document.getElementById('prevPage').addEventListener('click', function(e) {
-            e.preventDefault();
-            const prev = currentPage > 1 ? currentPage - 1 : 3;
-            switchPage(prev);
-        });
+.fullPage.active {
+    display: block;
+}
 
-        document.getElementById('nextPage2').addEventListener('click', function(e) {
-            e.preventDefault();
-            const next = currentPage < 3 ? currentPage + 1 : 1;
-            switchPage(next);
-        });
+.albumCover img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
 
-        document.getElementById('prevPage2').addEventListener('click', function(e) {
-            e.preventDefault();
-            const prev = currentPage > 1 ? currentPage - 1 : 3;
-            switchPage(prev);
-        });
+.arrow-icon {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
 
-        document.getElementById('nextPage3').addEventListener('click', function(e) {
-            e.preventDefault();
-            const next = currentPage < 3 ? currentPage + 1 : 1;
-            switchPage(next);
-        });
+.arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
 
-        document.getElementById('prevPage3').addEventListener('click', function(e) {
-            e.preventDefault();
-            const prev = currentPage > 1 ? currentPage - 1 : 3;
-            switchPage(prev);
-        });
-    </script>
-</body>
-</html>
+#prevPage {
+    left: 20px;
+}
+
+#nextPage {
+    right: 20px;
+}
+
+#prevPage2 {
+    left: 20px;
+}
+
+#nextPage2 {
+    right: 20px;
+}
+
+#prevPage3 {
+    left: 20px;
+}
+
+#nextPage3 {
+    right: 20px;
+}
+
+.download-link {
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.download-link:hover {
+    text-decoration: underline;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.socialWrap {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.socialLinks a {
+    text-decoration: none;
+}
+
+.socialLinks img {
+    width: 30px;
+    height: 30px;
+}
+
+.addThisButton {
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        font-size: 12px; /* Adjust font size for mobile */
+    }
+
+    .albumCover img {
+        width: auto;
+        height: auto;
+        max-width: 66%;
+        margin-top: 10%;
+    }
+}
