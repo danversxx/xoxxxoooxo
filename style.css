@@ -112,3 +112,55 @@ body {
 .addThisButton {
     margin-bottom: 10px;
 }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    #pagesWrap {
+        width: 90%; /* Scale down pagesWrap for tablet */
+    }
+
+    .albumCover img {
+        width: 80%;  /* Scale album art down but not too much */
+        height: auto;
+        margin-top: 5%;
+    }
+
+    .arrow {
+        width: 40px; /* Slightly bigger arrows for tablet */
+    }
+
+    .arrow-icon {
+        width: 40px;
+        height: auto;
+    }
+
+    #prevPage, #nextPage, #prevPage2, #nextPage2, #prevPage3, #nextPage3 {
+        top: 10px; /* Move arrows closer to the middle */
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #pagesWrap {
+        width: 90%; /* Scale down pagesWrap for mobile */
+    }
+
+    .albumCover img {
+        width: 70%;  /* Reduce album art size for mobile */
+        height: auto;
+        margin-top: 5%;
+    }
+
+    .arrow {
+        width: 35px; /* Slightly bigger arrows for mobile */
+    }
+
+    .arrow-icon {
+        width: 35px;
+        height: auto;
+    }
+
+    #prevPage, #nextPage, #prevPage2, #nextPage2, #prevPage3, #nextPage3 {
+        top: 5px; /* Move arrows closer to the middle on mobile */
+    }
+}
